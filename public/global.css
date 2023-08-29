@@ -28,10 +28,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-a:visited {
-	color: rgb(0,80,160);
-}
-
 .wrapper {
 	min-height: 100dvh;
 	display: grid;
@@ -41,4 +37,13 @@ a:visited {
 	max-width: 48em;
 	margin-inline: auto;
 	padding-block: 3rem;
+}
+
+.flow > * + * {
+	margin-block-start: 1.5rem;
+}
+
+.input-group {
+	display: grid;
+	gap: 0.25rem;
 }

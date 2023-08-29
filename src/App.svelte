@@ -50,7 +50,6 @@
 
 <style>
 	h1 {
-		/* padding: 1.5rem; */
 		text-align: center;
 	}
   header {
@@ -63,10 +62,6 @@
     display: grid;
 		align-self: self-start;
     gap: 1rem;
-    margin-block-start: 1rem;
-  }
-  :global(.input-group) {
-    display: grid;
-    gap: 0.25rem;
+		margin-block-start: 0.5rem;
   }
 </style>

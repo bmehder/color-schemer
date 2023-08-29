@@ -14,7 +14,7 @@
 
 <button	class="auto-color" on:click={copyToClipboard}>
 	{#if isCopied}
-		<small in:fade>Hex Code Copied!</small>
+		<span in:fade>Hex Code Copied!</span>
 	{:else}
 		{hexColor}
 	{/if}
@@ -35,7 +35,7 @@
 		cursor: pointer;
 	}
 	button:focus {
-		outline: 1px solid;
+		outline: 1px solid white;
 	}
 	.auto-color {
 		--threshold: 50;
