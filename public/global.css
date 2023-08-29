@@ -1,0 +1,44 @@
+:root {
+  color-scheme: dark light;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	/* outline: 1px solid lime; */
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+.wrapper {
+	min-height: 100dvh;
+	display: grid;
+	grid-template-rows: auto auto 1fr auto;
+	gap: 1.5rem;
+	width: min(100% - 1.5rem, 80%);
+	max-width: 48em;
+	margin-inline: auto;
+	padding-block: 3rem;
+}
