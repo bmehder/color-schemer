@@ -1,9 +1,11 @@
 <script>
+	import { toProperCase } from './utils'
+	
 	export let text
 </script>
 
 <button on:click>
-	{text[0].toUpperCase() + text.slice(1)}
+	{toProperCase(text)}
 </button>
 
 <style>

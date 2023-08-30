@@ -26,6 +26,7 @@
 
 <div class="wrapper">
   <h1>Color Schemer</h1>
+
   <header class="flex-center">
     <ColorInput label="color" bind:hexColor />
     <Select label="scheme" options={schemes} bind:option={scheme} />

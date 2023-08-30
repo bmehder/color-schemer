@@ -35,6 +35,10 @@ button {
   cursor: pointer;
 }
 
+select {
+  padding: 0.25rem;
+}
+
 .wrapper {
   min-height: 100dvh;
   display: grid;
