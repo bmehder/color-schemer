@@ -6,7 +6,6 @@
   import Select from './Select.svelte'
   import Button from './Button.svelte'
   import Swatch from './Swatch.svelte'
-  import Footer from './Footer.svelte'
 
   const schemes = ['contrast', 'analogic', 'triade', 'tetrade', 'mono']
   const variations = ['default', 'pastel', 'hard', 'soft', 'light', 'pale']
