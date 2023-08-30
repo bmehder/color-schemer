@@ -6,7 +6,7 @@
 	let isCopied = false
 
 	const copyToClipboard = evt => {
-		navigator.clipboard.writeText(evt.target.innerHTML)
+		navigator.clipboard.writeText(evt.target.innerHTML.trim())
 		isCopied = true
 		setTimeout(() => isCopied = false, 2000)
 	}

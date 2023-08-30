@@ -1,4 +1,5 @@
 <script>
+  import Icon from '@iconify/svelte'
   import { hexToHSL, randomHex } from './utils'
   import ColorScheme from 'color-scheme'
   import ColorInput from './ColorInput.svelte'
@@ -25,8 +26,8 @@
 </script>
 
 <div class="wrapper">
-	<h1>Color Schemer</h1>
-  <header>
+  <h1>Color Schemer</h1>
+  <header class="flex-center">
     <ColorInput label="color" bind:hexColor />
     <Select label="scheme" options={schemes} bind:option={scheme} />
     <Select label="variation" options={variations} bind:option={variation} />
@@ -42,26 +43,25 @@
     {/each}
   </main>
 
-  <Footer
-    url="https://github.com/c0bra/color-scheme-js#schemes"
-    label="color-scheme-js"
-  />
+  <footer class="flex-center">
+    <p>
+      Powered by <a href="https://github.com/c0bra/color-scheme-js" target="_blank"
+        >color-scheme-js</a
+      >
+    </p>
+    <div class="icon">
+      <a href="https://github.com/bmehder/color-schemer" target="_blank">
+        <Icon icon="icon-park:github" width="32" />
+      </a>
+    </div>
+  </footer>
 </div>
 
 <style>
-	h1 {
-		text-align: center;
-	}
-  header {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
   main {
     display: grid;
-		align-self: self-start;
+    align-self: self-start;
     gap: 1rem;
-		margin-block-start: 0.5rem;
+    margin-block-start: 0.5rem;
   }
 </style>

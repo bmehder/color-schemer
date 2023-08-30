@@ -10,6 +10,5 @@
 	button {
 		align-self: end;
 		padding: 0.2rem 1rem;
-		cursor: pointer;
 	}
 </style>
