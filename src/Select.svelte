@@ -10,7 +10,7 @@
 	<label for="{label}">{toProperCase(label)}</label>
 	<select id="{label}" name="{label}" bind:value={option}>
 		{#each options as _option}
-			<option>{_option}</option>
+			<option value="{_option}">{toProperCase(_option)}</option>
 		{/each}
 	</select>
 </div>
