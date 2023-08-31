@@ -1,7 +1,3 @@
-:root {
-  color-scheme: dark light;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,6 +28,10 @@ select {
   padding: 0.25rem;
 }
 
+.unset {
+  all: unset
+}
+
 .input-group {
   display: grid;
   gap: 0.25rem;
@@ -54,5 +54,11 @@ select {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  align-self: self-start;
   gap: 1rem;
 }

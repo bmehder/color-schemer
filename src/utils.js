@@ -46,6 +46,6 @@ export function hexToHSL(H) {
   return [h, s, l]
 }
 
-export const toProperCase = x => x[0].toUpperCase() + x.slice(1)
+export const toProperCase = x => x[0].toUpperCase() + x.slice(1).toLowerCase()
 
 export const wait = ms => new Promise(resolve => setTimeout(resolve, ms))

@@ -30,7 +30,7 @@
 
   <Colors {hexColors} {hexColor} />
 
-  <Footer {hexColor} />
+  <Footer />
 </div>
 
 <style>
@@ -38,11 +38,11 @@
     min-height: 100dvh;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    gap: 1.5rem;
+    gap: 2em;
     width: min(100% - 1.5rem, 80%);
     max-width: 48em;
     margin-inline: auto;
-    padding-block: 3rem;
+    padding-block: 1.5rem;
     text-align: center;
   }
 </style>

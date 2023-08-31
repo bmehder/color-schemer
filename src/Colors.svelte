@@ -8,7 +8,7 @@
   $: [hue, sat, light] = hexToHSL(hexColor)
 </script>
 
-<main>
+<main class="grid">
   <Color {hexColor} --hue={hue} --sat={sat} --light={light} />
   {#each hexColors as hexValue}
     {@const hexColor = '#' + hexValue}
@@ -16,12 +16,3 @@
     <Color {hexColor} --hue={hue} --sat={sat} --light={light} />
   {/each}
 </main>
-
-<style>
-  main {
-    display: grid;
-    align-self: self-start;
-    gap: 1rem;
-    margin-block-start: 0.5rem;
-  }
-</style>
