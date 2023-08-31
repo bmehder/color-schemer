@@ -11,6 +11,6 @@
 <style>
 	button {
 		align-self: end;
-		padding: 0.2rem 1rem;
+		padding: 0.25rem 1rem;
 	}
 </style>

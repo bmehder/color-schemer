@@ -1,18 +1,22 @@
 <script>
 	import { fade } from 'svelte/transition'
+	import { wait } from './utils'
 	
 	export let hexColor
 
 	let isCopied = false
 
-	const copyToClipboard = evt => {
-		navigator.clipboard.writeText(evt.target.innerHTML.trim())
+	const copyText = evt => navigator.clipboard.writeText(evt.target.innerHTML.trim())
+
+	async function copyToClipboard(evt) {
+		copyText(evt)
 		isCopied = true
-		setTimeout(() => isCopied = false, 2000)
+		await wait(2000)
+		isCopied = false
 	}
 </script>
 
-<button	class="auto-color" on:click={copyToClipboard}>
+<button in:fade	class="auto-color" on:click={copyToClipboard}>
 	{#if isCopied}
 		<span in:fade>Hex Code Copied!</span>
 	{:else}
@@ -33,6 +37,7 @@
 		text-align: center;
 		text-transform: uppercase;
 		cursor: pointer;
+		border-radius: 0.125rem;
 	}
 	button:focus {
 		outline: 1px solid white;

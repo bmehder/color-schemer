@@ -47,3 +47,5 @@ export function hexToHSL(H) {
 }
 
 export const toProperCase = x => x[0].toUpperCase() + x.slice(1)
+
+export const wait = ms => new Promise(resolve => setTimeout(resolve, ms))
