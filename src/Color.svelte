@@ -1,12 +1,15 @@
 <script>
+  import Icon from '@iconify/svelte'
   import { fade } from 'svelte/transition'
   import { wait } from './utils'
 
   export let hexColor
 
   let isCopied = false
+  let isHidden = false
 
   const copyText = evt => navigator.clipboard.writeText(evt.target.innerHTML.trim())
+  const hide = () => (isHidden = true)
 
   async function copyToClipboard(evt) {
     copyText(evt)
@@ -16,16 +19,28 @@
   }
 </script>
 
-<button in:fade class="auto-color" on:click={copyToClipboard}>
-  {#if isCopied}
-    <span in:fade>Hex Code Copied!</span>
-  {:else}
-    {hexColor}
-  {/if}
-</button>
+{#if !isHidden}
+  <div transition:fade>
+    <button class="color auto-color" on:click={copyToClipboard}>
+      {#if isCopied}
+        <span in:fade>Hex Code Copied!</span>
+      {:else}
+        {hexColor}
+      {/if}
+    </button>
+    <button class="close" on:click={hide}>
+      <Icon icon="zondicons:close-solid" width="32" />
+    </button>
+  </div>
+{/if}
 
 <style>
-  button {
+  div {
+    display: grid;
+    grid-template-columns: 1fr 2ch;
+    gap: 0.5rem;
+  }
+  .color {
     all: unset;
     padding-block: 1rem;
     background-color: hsl(var(--hue), calc(var(--sat) * 1%), calc(var(--light) * 1%));
@@ -35,7 +50,14 @@
     cursor: pointer;
     border-radius: 0.125rem;
   }
-  button:focus {
+  .close {
+    all: unset;
+    cursor: pointer;
+  }
+  .close:hover {
+    scale: 0.95;
+  }
+  .color:focus {
     outline: 1px solid white;
   }
   .auto-color {
