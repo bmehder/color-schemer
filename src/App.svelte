@@ -11,11 +11,13 @@
   let hexColor = randomHex()
   let scheme = SCHEMES.at(0)
   let variation = VARIATIONS.at(0)
+  let distance = 0.5
 
   $: hexColors = new ColorScheme()
     .from_hex(hexColor.slice(1))
     .scheme(scheme)
     .variation(variation)
+    .distance(distance)
     .colors()
 </script>
 
@@ -26,6 +28,7 @@
     bind:hexColor
     bind:scheme
     bind:variation
+    bind:distance
   />
 
   <Colors {hexColors} {hexColor} />
