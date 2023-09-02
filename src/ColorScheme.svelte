@@ -10,7 +10,8 @@
 
 <button class="unset" on:click={toggleColorScheme}>
   {#if colorScheme === 'dark'}
-    <Icon icon="ic:outline-dark-mode" width="32" />
+    <!-- <Icon icon="ic:outline-dark-mode" width="32" /> -->
+    <Icon icon="iconoir:sun-light" width="32" />
   {:else}
     <Icon icon="ic:baseline-dark-mode" width="32" />
   {/if}

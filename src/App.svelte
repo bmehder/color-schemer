@@ -8,9 +8,9 @@
   const SCHEMES = Object.freeze(['contrast', 'analogic', 'triade', 'tetrade', 'mono'])
   const VARIATIONS = Object.freeze(['default', 'pastel', 'hard', 'soft', 'light', 'pale'])
 
+  let hexColor = randomHex()
   let scheme = SCHEMES.at(0)
   let variation = VARIATIONS.at(0)
-  let hexColor = randomHex()
 
   $: hexColors = new ColorScheme()
     .from_hex(hexColor.slice(1))

@@ -20,27 +20,17 @@
 </script>
 
 {#if !isHidden}
-  <div transition:fade>
-    <button class="color auto-color" on:click={copyToClipboard}>
-      {#if isCopied}
-        <span in:fade>Hex Code Copied!</span>
-      {:else}
-        {hexColor}
-      {/if}
-    </button>
-    <button class="close" on:click={hide}>
-      <Icon icon="zondicons:close-solid" width="32" />
-    </button>
-  </div>
+  <button class="auto-color" on:click={copyToClipboard}>
+    {#if isCopied}
+      <span in:fade>Hex Code Copied!</span>
+    {:else}
+      {hexColor}
+    {/if}
+  </button>
 {/if}
 
 <style>
-  div {
-    display: grid;
-    grid-template-columns: 1fr 2ch;
-    gap: 0.5rem;
-  }
-  .color {
+  button {
     all: unset;
     padding-block: 1rem;
     background-color: hsl(var(--hue), calc(var(--sat) * 1%), calc(var(--light) * 1%));
@@ -50,14 +40,7 @@
     cursor: pointer;
     border-radius: 0.125rem;
   }
-  .close {
-    all: unset;
-    cursor: pointer;
-  }
-  .close:hover {
-    scale: 0.95;
-  }
-  .color:focus {
+  button:focus {
     outline: 1px solid white;
   }
   .auto-color {
