@@ -30,6 +30,9 @@
 </header>
 
 <style>
+  header {
+    padding-block-start: 2rem;
+  }
   .flex-center {
     align-items: start;
   }
